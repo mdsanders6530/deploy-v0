@@ -1,9 +1,7 @@
 import Image from 'next/image'
-import { Aperture, ArrowUpRight } from 'lucide-react'
-import { FieldNote } from '@/components/field-note'
+import { ArrowDownRight, ArrowUpRight, Cog } from 'lucide-react'
+import { CatalogSections } from '@/components/catalog-sections'
 
 export default function Page() {
- return <main className="journal"><header><a href="#" className="brand"><Aperture aria-hidden="true" size={27}/> Stillfield</a><nav aria-label="Main"><a href="#journal">Journal</a><a href="#about">About <ArrowUpRight size={13}/></a></nav></header>
- <article id="journal"><div className="intro"><div className="kicker"><i/> FIELD JOURNAL <span>/</span> VOL. 01</div><h1>Where the land ends.</h1><p>A visual field note from the edge of the California coast.</p></div>
- <figure><div className="photo"><Image src="/coast.png" alt="Layers of coastal cliffs receding into peach-colored haze above the Pacific" fill priority sizes="(max-width: 1200px) 92vw, 1180px"/><div className="plate">FIG. 001</div></div><figcaption><b>01</b><strong>Big Sur, California</strong><span>36.27° N &nbsp; 121.81° W</span></figcaption></figure><FieldNote/></article><footer id="about"><div className="kicker">ABOUT STILLFIELD</div><p>An independent visual journal of landscapes, light, and the details worth stopping for.</p><small>Stillfield &nbsp; / &nbsp; Volume 01</small></footer></main>
+  return <><header><div className="wrap bar"><a className="brand" href="#top"><Cog aria-hidden="true"/><span>CRAZY MIKE&apos;S<small>AUTO REPAIR &amp; ACCESSORIES</small></span></a><nav aria-label="Main navigation"><a href="#offer">What we offer</a><a href="#pricing">Pricing</a><a className="contact" href="#contact">Contact <ArrowUpRight size={15}/></a></nav></div></header><main id="top"><section className="wrap hero"><div><div className="label"><i/> WHOLESALE AUTO PARTS</div><h1>Crazy Mike&apos;s<span>Auto Repair &amp;<br/>Accessories</span></h1><p>Quality automotive repair parts and accessories, wholesale, at the cheapest prices around — built for shops, mechanics, and resellers.</p><a className="cta" href="#pricing">View wholesale pricing <ArrowDownRight size={17}/></a></div><figure><Image src="/brake-assembly.png" alt="Technical illustration of a disc brake assembly" width={800} height={640} priority/><figcaption>FIG. 01 <b>/</b> DISC BRAKE ASSEMBLY</figcaption></figure></section><CatalogSections/></main></>
 }
