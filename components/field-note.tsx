@@ -1,0 +1,1 @@
+export function FieldNote(){return <details className="note"><summary>Read the field note <span aria-hidden="true"/></summary><p>The nearest ridge is almost black. Beyond it, each headland loses a little more of its outline until the last one is scarcely darker than the sky. Out to the right, the water catches what light is left.</p></details>}
